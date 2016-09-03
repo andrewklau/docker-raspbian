@@ -1,7 +1,7 @@
-rpi-raspbian
+raspbian
 ===================
 
-[Raspbian](http://www.raspbian.org/) image for docker on raspberry pi.
+[Raspbian](http://www.raspbian.org/) image for docker on raspberry pi. Raspbian version 2016-09-03-raspbian-jessie-minbase
 
 
 Generating
@@ -17,9 +17,10 @@ If you want to build this image yourself, run the following to generate the comp
 
 ```bash
 $ rm *.tar.xz
+$ apt-get install debootstrap
 $ ./mkimage-raspbian.sh
 ```
-Get some tacos.
+Get lots of tacos.
 
 ```bash
 $ docker build -t rpi-raspbian .
@@ -30,5 +31,5 @@ Running
 This image does not do anything fancy, but if you want to test it out, run the following:
 
 ```bash
-$ docker run --name raspbian -it sdhibit/rpi-raspbian:latest /bin/bash
+$ docker run --name raspbian -it andrewklau/rpi-raspbian:latest /bin/bash
 ```

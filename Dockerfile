@@ -1,5 +1,4 @@
-#sdhibit/rpi-raspbian
 FROM scratch
-MAINTAINER Steve Hibit <sdhibit@gmail.com>
+MAINTAINER Andrew Lau <andrew@andrewklau.com>
 
-ADD raspbian.2015.05.05.tar.xz /
+ADD 2016-09-03-raspbian-jessie.tar.xz /

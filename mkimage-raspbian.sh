@@ -3,12 +3,12 @@ set -e
 
 dir="raspbian"
 rootfsDir="raspbian"
-tarFile="raspbian.2015.05.05.tar.xz"
+tarFile="2016-09-03-raspbian-jessie.tar.xz"
 ( set -x; mkdir -p "$rootfsDir" )
 
 (
 	set -x
-	debootstrap --no-check-gpg --arch=armhf --verbose --variant='minbase' --include='iproute,iputils-ping' jessie "$rootfsDir" http://archive.raspbian.org/raspbian/
+	debootstrap --no-check-gpg --arch=armhf --verbose --variant='minbase' --include='iproute,iputils-ping' jessie "$rootfsDir" http://mirrordirector.raspbian.org/raspbian/
 )
 
 # now for some Docker-specific tweaks
